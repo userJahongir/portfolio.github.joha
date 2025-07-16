@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jahon Portfolio</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fade-in 2s ease-out;
+    }
+  </style>
+</head>
+
+<body class="bg-blue-500 text-gray-800 font-[Inter]">
+
+  <nav class=" bg-white py-4 border-b border-gray-200 shadow-md">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <img class="w-28 h-30" src="./logo.png" alt="Logo" />
+
+
+      <button id="menu-toggle" class="md:hidden text-3xl focus:outline-none">
+        ☰
+      </button>
+
+      <ul id="menu" class="hidden md:flex gap-6 text-gray-600">
+        <li><a href="#about" class="hover:text-blue-500 transition">About</a></li>
+        <li><a href="#projects" class="hover:text-blue-500 transition">Projects</a></li>
+        <li><a href="#contact" class="hover:text-blue-500 transition">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="object-contain bg-no-repeat w-[100%]  bg-cover bg-[url(/img/24.jpg)] py-20 bg-gray-100 animate-fade-in">
+    <div class="max-w-4xl mx-auto px-4 flex flex-col md:flex-row items-center md:items-start gap-10">
+      <div class="flex-shrink-0">
+        <img class="w-40 h-40 rounded-full object-cover" src="./me.png" alt="Jahon image" />
+      </div>
+      <div class="text-center md:text-left">
+        <h2 class="text-white text-4xl md:text-5xl font-bold mb-4">Hi, I'm Jahon</h2>
+        <p class="text-lg text-white mb-6">Web Developer & Designer</p>
+        <a href="#projects" class="bg-blue-500 text-white py-2 px-6 rounded hover:bg-blue-600 transition">
+          See My Work
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-16 px-4 max-w-3xl mx-auto animate-fade-in">
+    <h3 class="text-2xl font-semibold mb-4 text-center md:text-left">About Me</h3>
+    <p class="text-gray-700 leading-relaxed">
+      Hello! My name is Jahongir and I’m a passionate frontend developer and designer from Uzbekistan. I started my
+      journey in programming back in 2025, and since then, I’ve been constantly exploring the world of technology and
+      creativity. 
+    </p>
+    <br>
+    <div class="flex w-[500px] gap-[25px]">
+      <img class="w-[100%]" src="./jj.png" alt="">
+      <img class="w-[100%]" src="./3fa4ca50-4736-4c64-9233-5747b121f81f_removalai_preview.png" alt="">
+    </div>
+  </section>
+
+  <section id="projects" class="text-black py-16 bg-gray-50 px-4 animate-fade-in">
+    <div class="max-w-5xl mx-auto">
+      <h3 class="text-2xl font-semibold text-center mb-10">My Projects</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+          class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <h4 class="text-xl font-bold mb-2">Project 1</h4>
+          <p class="text-gray-600 mb-2">This is a simple static webpage made with HTML and style.css.</p>
+          <img class="rounded-tr-lg" src="./kamaz.png" alt="Project 1 Image" />
+        </div>
+
+        <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+          class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <h4 class="text-xl font-bold mb-2">Project 2</h4>
+          <p class="text-gray-600 mb-2">Another basic responsive layout with animations.</p>
+          <img class="rounded-tr-lg" src="./burger.png" alt="Project 2 Image" />
+        </div>
+
+        <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+          class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <h4 class="text-xl font-bold mb-2">Project 3</h4>
+          <p class="text-gray-600 mb-2">Responsive UI for real estate landing page.</p>
+          <img class="rounded-tr-lg" src="./bino.png" alt="Project 3 Image" />
+        </div>
+
+
+        <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+          class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <h4 class="text-xl font-bold mb-2">Project 4</h4>
+          <p class="text-gray-600 mb-2">Landing page for a food ordering app.</p>
+          <img class="rounded-tr-lg" src="./orange.png" alt="Project 4 Image" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-16 px-4 max-w-xl mx-auto animate-fade-in">
+    <h3 class="text-2xl font-semibold mb-4 text-center">Contact Me</h3>
+    <form class="flex flex-col gap-4">
+      <input type="text" placeholder="Your name" class="border p-3 rounded" />
+      <input type="email" placeholder="Your email" class="border p-3 rounded" />
+      <textarea placeholder="Your message" class="border p-3 rounded"></textarea>
+      <button class="bg-blue-500 text-white py-3 rounded hover:bg-blue-600 transition">Send</button>
+    </form>
+  </section>
+
+
+  <footer class="bg-gray-100 border-t text-center py-6 text-sm text-gray-600 px-4">
+    <p>Tel: +998 95 038 38 33</p>
+    <p>Tel: +998 95 903 33 39</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+
+</html>
